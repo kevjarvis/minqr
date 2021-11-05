@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | MinQR</title>
+  <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon">
+  <meta name="keywords" content="Cómo escanear código QR, Cómo generar códigos QR, Registrarse, Códigos QR">
+  <meta name="description" content="Registrate en MinQR y obtén beneficios increíbles por ser parte de este movimiento">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header id="header">
+    <nav class="navbar">
+      <a href="index.html" class="navbar__logo">Min-<span class="navbar__logo--yellow">QR</span></a>
+
+      <input class="navbar__button" type="checkbox" id="navbar__button">
+      <label for="navbar__button" class="navbar__icon">
+        <span class="navicon"></span>
+      </label>
+
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html" class="navbar__link">Inicio</a></li>
+        <li class="navbar__item"><a href="contacto.html" class="navbar__link">Contacto</a></li>
+        <li class="navbar__item"><a href="acceso.html" class="navbar__link">Iniciar sesión</a></li>
+        <li class="navbar__item"><a href="registro.html" class="navbar__link navbar__link--active">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="root-main sign">
+    <div class="sign__img sign__img--signup"></div>
+    <div class="sign__form">
+      <h1 class="sign__title">Registro</h1>
+      <form action="#" method="post" class="sign__formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" name="email" id="email">
+
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password">
+
+        <label for="password">Confirme su contraseña</label>
+        <input type="password" name="password" id="password">
+        
+        <div>
+          <input type="checkbox" name="acuerdos" id="acuerdos" class="checkbox">
+          <label for="acuerdos">Estoy de acuerdo con los términos y servicios de MinQR</label>
+        </div>
+        <input type="submit" value="Registrarse" class="btn btn--primary-black">
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="footer-brand__logo">Min-<span class="footer-brand__logo--amarillo">QR</span></span>
+      <p class="footer-brand__uvp">Minimal merchandising, disfruta la vida con QR</p>
+      <div class="footer-brand-rrss">
+        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="footer-menu">
+        <a href="contacto.html" class="footer-menu__link">Soporte</a>
+        <a href="index.html#top" class="footer-menu__link">Productos</a>
+        <a href="acceso.html" class="footer-menu__link">Iniciar sesión</a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <span class="footer-newsletter__title"><span class="footer-newsletter__title--yellow">Únete</span>
+      a nuestro boletín
+      </span>
+
+      <form action="#" method="post" class="footer-newsletter-form">
+        <input type="email" name="newsletter" id="footer-newsletter" class="footer-newsletter-form__input" placeholder="Correo electrónico">
+        <input type="submit" value="Unirme" class="footer-newsletter-form__submit btn btn--primary">
+      </form>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@import "../base/variables";
+@import '../base/media-queries';
+@import '../base/mixins';
+
+.root-main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* ANCHOR sign section */
+
+/* Contempla el div de la imagen y el 
+ * formulario de registro/inicio sesión */
+ .sign {
+  @include flex-row-nowrap;
+  padding-left: $m-sm;
+  padding-right: $m-sm;
+
+  &__formulario {
+    @include flex-col-nowrap;
+    gap: 1rem;
+
+    label {
+      @include raleway-700(1rem);
+    }
+
+    input {
+      @include poppins-400(1rem);
+      height: 3.5rem;
+      border-radius: 3px;
+      border: solid 1px $c-black;
+      padding: 0 19px;
+    }
+  }
+}
+
+.sign__img {
+  display: none;
+}
+
+.sign__img--right {
+  order: 2;
+}
+
+.sign__form {
+  @include flex-col-nowrap;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+.sign__title {
+  font-family: 'Neoneon', sans-serif;
+  font-size: 2.3em;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#acuerdos {
+  height: 16px;
+}
+
+@media (min-width: 576px) {
+  /* Esta regla es para que el botón a este tamaño
+   * no esté al 100% de la pantalla */
+  .sign .btn {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign__form {
+    margin-left: 1rem;
+  }
+
+  .sign { 
+    padding-right: $m-sm;
+    padding-left: 0;
+    gap: var(--p-sm);
+  }
+  .sign--left {
+    padding: 0 0 0 $m-sm; 
+    gap: $m-sm;
+  }
+  .sign__title {margin-top: 1em;}
+  .sign__img {
+    display: initial;
+    background-image: url("../src/img/imagen-lateral-acceso.jpg");
+    width: 45%;
+    background-size: cover;
+  }
+  .sign__img--signup {
+    background-image: url("../src/img/imagen-lateral-registro.jpg");
+  }
+  .sign__form .btn { margin-bottom: 2em; }
+}
+
+@media (min-width: 992px) {
+  .sign { 
+    margin-right: $m-lg;
+    gap: $m-lg;
+  }
+  .sign--left {
+    padding: 0 0 0 $m-lg; 
+    gap: $m-lg;
+  }
+  .sign__form .formulario {
+    max-width: 90%;
+  }
+  .sign__img {
+    width: 50%;
+  }
+  .sign__title {
+    text-align: initial;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sign { gap: $m-lg }
+}

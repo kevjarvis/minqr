@@ -1,0 +1,75 @@
+@import "../base/variables";
+@import '../base/media-queries';
+@import '../base/mixins';
+
+.hero {
+  @include flex-col-nowrap;
+  background-color: $c-black-84;
+  gap: 1px;
+  padding: 1rem $m-sm 3rem $m-sm;
+
+  @include responsive(md) {
+    flex-flow: row nowrap;
+    padding: 1rem $m-lg 0 $m-lg;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  &__wrapper {
+    @include flex-row-nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2.625rem;
+
+    @include responsive(md) {
+      gap: 3.5rem;
+    }
+
+    @include responsive(lg) {
+      gap: 6rem;
+    }
+  }
+
+  &__text-vertical {
+    @include flex-col-nowrap;
+    gap: 39px;
+    margin-left: 12px;
+
+    span {
+      @include poppins-400(0.714rem);
+      writing-mode:vertical-lr;
+      transform: rotate(180deg);
+      color: $c-gray;
+    }
+  }
+
+  &__title {
+    @include poppins-900(22px);
+    color: $c-white;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    @include poppins-900(41px);
+    color: $c-white;
+  }
+
+  &__description {
+    @include raleway-400(14px);
+    color: $c-white;
+    margin-bottom: 25px;
+  }
+
+  &__button {
+    align-self: flex-start;
+    margin-bottom: 25px;
+  }
+
+  &__img {
+    width: 250px;
+
+    @include responsive(lg) {
+      width: 300px;
+    }
+  }
+}

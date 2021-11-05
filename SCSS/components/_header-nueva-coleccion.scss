@@ -1,0 +1,58 @@
+@import '../base/media-queries';
+@import '../base/mixins';
+@import '../base/variables';
+
+.collection-banner {
+  @include flex-col-nowrap;
+  margin: 0 $m-sm 2rem $m-sm;
+  background: linear-gradient(180deg, #E6EB10 0%, rgba(255, 246, 163, 0.76) 100%);
+  border-radius: 5px;
+  gap: 1rem;
+  padding: 10px;
+
+  @include responsive(sm) {
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+  }
+
+  @include responsive(lg) {
+    width: 75%;
+    align-self: center;
+    max-width: 836px;
+  }
+
+  @media (min-width: 768px) {
+    & { margin: 0 $m-lg 2rem $m-lg; }
+  }
+
+  &__img {
+    width: 234.1px;
+    align-self: center;
+  }
+
+  &__review {
+    @include flex-col-nowrap;
+    gap: 0.5rem;
+    @include responsive(sm) {
+      align-self: baseline;
+    }
+  }
+
+  &__title {
+    @include poppins-400(1.142rem);
+    align-self: center;
+
+    @include responsive(sm) { align-self: flex-start; }
+  }
+
+  &__description {
+    @include raleway-400(1rem);
+    color: #4D4D4D;
+    align-self: center;
+    line-height: 1.6;
+    text-align: center;
+    @include responsive(sm) {
+      text-align: left;
+    }
+  }
+}

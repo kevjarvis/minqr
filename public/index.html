@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Cómo escanear código QR, Código QR,
+   Ropa con códigos QR, Ropa de hombre con código QR, Ropa de mujer con código QR">
+  <meta name="description" content="Spoiler: En esta página encontrarás ropa de hombre y mujer con tecnología QR. Despacho a todo el mundo, si no te gusta lo devuelves, así de simple.">
+  <title>MinQR | Ropa con tecnología QR hecha para ti</title>
+  <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header id="header">
+    <nav class="navbar">
+      <a href="#" class="navbar__logo">Min-<span class="navbar__logo--yellow">QR</span></a>
+
+      <input class="navbar__button" type="checkbox" id="navbar__button">
+      <label for="navbar__button" class="navbar__icon">
+        <span class="navicon"></span>
+      </label>
+
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="#" class="navbar__link navbar__link--active">Inicio</a></li>
+        <li class="navbar__item"><a href="contacto.html" class="navbar__link">Contacto</a></li>
+        <li class="navbar__item"><a href="acceso.html" class="navbar__link">Iniciar sesión</a></li>
+        <li class="navbar__item"><a href="registro.html" class="navbar__link">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="hero__wrapper">
+        <!-- Texto vertical a la izquierda -->
+        <div class="hero__text-vertical">
+          <span>Poleras</span>
+          <span>Nueva colección</span>
+        </div>
+
+        <picture>
+          <source media="(min-width: 992px)" srcset="src/img/hero_img-x2.png">
+          <img src="src/img/hero_img-x1.png" alt="Hombre vistiendo prenda minQR">
+        </picture>
+        
+        <img src="src/hero__line.svg" alt="Diseño barra lateral derecha" class="hero__bar-design">
+      </div>
+      <div>
+        <h1 class="hero__title">Estampados QR</h1>
+        <h2 class="hero__subtitle">Poleras</h2>
+        <p class="hero__description">Con la nueva colección de poleras sientete libre de explorar lo nuevo en innovación y tecnología.</p>
+        <a role="button" href="#top" class="hero__button btn-link btn-link--primary-yellow">Ver los productos</a>
+      </div>
+    </section>
+
+    <section class="top-collection" id="top">
+      <div class="section__header">
+        <span class="section__collection">Colección</span>
+        <span class="section__bar"></span>
+        <h3 class="section__title">Nuestra colección TOP</h3>
+      </div>
+
+      <div class="products-section">
+        <article class="product">
+          <div class="product__review">
+            <picture>
+              <source media="(min-width: 992px)" srcset="src/img/products/poleron2_old_collection-min-x4.jpg">
+              <source media="(min-width: 768px)" srcset="src/img/products/poleron2_old_collection-min-x3.jpg">
+              <source media="(min-width: 576px)" srcset="src/img/products/poleron2_old_collection-min-x2.jpg">
+              <img src="src/img/products/poleron2_old_collection-min-x1.jpg" alt="Hombre vistiendo polerón negro sin cierre con código QR" class="product__img">
+            </picture>
+            <p class="product__description">
+              Fabricado con fibras especialmente hiladas que hacen un tejido muy fuerte y suave 
+            </p>
+          </div>
+          <strong class="product__name">Unisex Heavy Blend</strong>
+          <span class="product__collection">Colección 2021</span>
+          <div class="buy-section">
+            <span class="product__price">$18.99</span>
+            <form action="orden.html" method="get">
+              <input type="submit" value="Comprar" class="btn btn--primary-black product__button">
+            </form>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product__review">
+            <picture>
+              <source media="(min-width: 992px)" srcset="src/img/products/poleron_old_collection-min-x4.jpg">
+              <source media="(min-width: 768px)" srcset="src/img/products/poleron_old_collection-min-x3.jpg">
+              <source media="(min-width: 576px)" srcset="src/img/products/poleron_old_collection-min-x2.jpg">
+              <img src="src/img/products/poleron_old_collection-min-x1.jpg" alt="Hombre vistiendo polerón negro con cierre de marca MinQR" class="product__img">
+            </picture>
+            <p class="product__description">
+              Fabricado con fibras especialmente hiladas que hacen un tejido muy fuerte y suave
+            </p>
+          </div>
+          <strong class="product__name">Unisex Bolded Bless</strong>
+          <span class="product__collection">Colección 2021</span>
+          <div class="buy-section">
+            <span class="product__price">$17.99</span>
+            <form action="orden.html" method="get">
+              <input type="submit" value="Comprar" class="btn btn--primary-black product__button">
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="new-collection">
+      <div class="section__header">
+        <span class="section__collection">Nueva colección</span>
+        <span class="section__bar"></span>
+        <h3 class="section__title">Bienvenida colección Damaris</h3>
+      </div>
+
+      <div class="collection-banner">
+        <img src="src/img/nueva_coleccion-min-x1.png" alt="Foto de producción para la nueva colección de MinQR" class="collection-banner__img">
+        <div class="collection-banner__review">
+          <span class="collection-banner__title">Interviene el estilo</span>
+          <p class="collection-banner__description">Con la nueva categoría "Damaris" siente libre, innova tu vida, se tu mismo, atrevete a alcanzar nuevos horizontes, la colección 2022 viene cargada de emociones que te harán vibrar </p>
+        </div>
+      </div>
+
+      <div class="products-section">
+        <article class="product">
+          <div class="product__review">
+            <picture>
+              <source media="(min-width: 992px)" srcset="src/img/products/polera_nueva-coleccion-min-x4.jpg">
+              <source media="(min-width: 768px)" srcset="src/img/products/polera_nueva-coleccion-min-x3.jpg">
+              <source media="(min-width: 576px)" srcset="src/img/products/polera_nueva-coleccion-min-x2.jpg">
+              <img src="src/img/products/polera_nueva-coleccion-min-x1.jpg" alt="Mujer vistiendo prenda blanca con código QR azul" class="product__img">
+            </picture>
+            <p class="product__description">Con Froim aprovecha la historia detras de ella, sutil y fina.</p>
+          </div>
+          <strong class="product__name">Froim Gauss QR</strong>
+          <span class="product__collection">Colección 2022</span>
+          <div class="buy-section">
+            <span class="product__price">$15.99</span>
+            <form action="orden.html" method="get">
+              <input type="submit" value="Comprar" class="btn btn--primary-black product__button">
+            </form>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product__review">
+            <picture>
+              <source media="(min-width: 992px)" srcset="src/img/products/buzo_nueva-coleccion-min-x4.jpg">
+              <source media="(min-width: 768px)" srcset="src/img/products/buzo_nueva-coleccion-min-x3.jpg">
+              <source media="(min-width: 576px)" srcset="src/img/products/buzo_nueva-coleccion-min-x2.jpg">
+              <img src="src/img/products/buzo_nueva-coleccion-min-x1.jpg" alt="Mujer vistiendo el nuevo buzo de colección negro con código QR color azul" class="product__img">
+            </picture>
+            <p class="product__description">Tienes el poder suficiente para esta prenda? sigue tus instintos y lanzate.</p>
+          </div>
+          <strong class="product__name">Buzo Galactic</strong>
+          <span class="product__collection">Colección 2022</span>
+          <div class="buy-section">
+            <span class="product__price">$25.99</span>
+            <form action="orden.html" method="get">
+              <input type="submit" value="Comprar" class="btn btn--primary-black product__button">
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="footer-brand__logo">Min-<span class="footer-brand__logo--amarillo">QR</span></span>
+      <p class="footer-brand__uvp">Minimal merchandising, disfruta la vida con QR</p>
+      <div class="footer-brand-rrss">
+        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="footer-menu">
+        <a href="contacto.html" class="footer-menu__link">Soporte</a>
+        <a href="index.html#top" class="footer-menu__link">Productos</a>
+        <a href="acceso.html" class="footer-menu__link">Iniciar sesión</a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <span class="footer-newsletter__title"><span class="footer-newsletter__title--yellow">Únete</span>
+      a nuestro boletín
+      </span>
+
+      <form action="#" method="post" class="footer-newsletter-form">
+        <input type="email" name="newsletter" id="footer-newsletter" class="footer-newsletter-form__input" placeholder="Correo electrónico">
+        <input type="submit" value="Unirme" class="footer-newsletter-form__submit btn btn--primary">
+      </form>
+    </div>
+  </footer>
+</body>
+</html>

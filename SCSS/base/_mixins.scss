@@ -1,0 +1,53 @@
+@import 'variables';
+
+@mixin flex-col-wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+@mixin flex-col-nowrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin flex-row-nowrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+// REVIEW: poner ojo con el px de los textos
+
+@mixin poppins-400($size) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: $size;
+}
+
+@mixin poppins-700($size) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: $size;
+}
+
+@mixin poppins-900($size) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: $size;
+}
+
+@mixin raleway-400($size) {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: $size;
+}
+
+@mixin raleway-700($size) {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: $size;
+}

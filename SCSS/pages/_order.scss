@@ -1,0 +1,109 @@
+@import "../base/variables";
+@import '../base/media-queries';
+@import '../base/mixins';
+
+
+@media (min-width: 992px) {
+  .checkout {
+    @include flex-row-nowrap;
+    align-items: flex-start;
+  }
+  .registro-datos {
+    flex-grow: 1;
+  }
+  .resumen {
+    width: 50%;
+    padding: 1em 1em;
+    order: 2;
+  }
+}
+
+.resumen__text {
+  @include raleway-400(1rem);
+  color: $c-white;
+}
+
+.resumen__text--negro {
+  color: $c-black;
+}
+
+.resumen__text--title {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.resumen-detalles {
+  @include flex-row-nowrap;
+  justify-content: space-between;
+}
+
+.resumen-detalles__section {
+  @include flex-col-nowrap;
+  gap: .5em;
+}
+
+.resumen-producto__img {
+  width: 9em;
+  border-radius: 3px;
+}
+
+.resumen-producto {
+  @include flex-row-nowrap;
+  gap: 1em;
+  margin-bottom: 2.3em;
+  justify-content: space-between;
+}
+
+.registro-datos {
+  padding: 1em $m-sm;
+  @include responsive(md){
+    padding: 2rem $m-lg;
+  }
+  @include responsive(lg) {
+    padding: 2rem 120px;
+  }
+  @include responsive(xl) {
+    padding: 2rem 300px;
+  }
+}
+
+.registro-datos__title {
+  display: inline-block;
+  border-bottom: solid 1px $c-gray;
+  width: 100%;
+  @include poppins-700(1.2rem);
+  margin-bottom: 1em;
+}
+
+.formulario-orden { margin-bottom: 2em; }
+
+.volver {
+  @include poppins-400(1rem);
+  margin-bottom: 1em;
+  border-bottom: dashed 1px $c-black;
+}
+
+.volver a {
+  text-decoration: none;
+  color: $c-black;
+}
+
+.order__formulario {
+  @include flex-col-nowrap;
+  gap: 1rem;
+  label {
+    @include raleway-700(1rem);
+  }
+
+  input {
+    @include poppins-400(1rem);
+    height: 3.5rem;
+    border-radius: 3px;
+    border: solid 1px $c-black;
+    padding: 0 19px;
+  }
+}
+
+.order__button {
+  align-self: flex-start;
+}

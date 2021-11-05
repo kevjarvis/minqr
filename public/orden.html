@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Checkout - MinQR</title>
+  <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="root-main">
+  <header id="header">
+    <nav class="navbar">
+      <a href="index.html" class="navbar__logo">Min-<span class="navbar__logo--yellow">QR</span></a>
+
+      <input class="navbar__button" type="checkbox" id="navbar__button">
+      <label for="navbar__button" class="navbar__icon">
+        <span class="navicon"></span>
+      </label>
+
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html" class="navbar__link">Inicio</a></li>
+        <li class="navbar__item"><a href="contacto.html" class="navbar__link">Contacto</a></li>
+        <li class="navbar__item"><a href="acceso.html" class="navbar__link">Iniciar sesión</a></li>
+        <li class="navbar__item"><a href="registro.html" class="navbar__link">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="checkout">
+    <!-- ANCHOR sección de registro de datos -->
+    <section class="registro-datos">
+      <div class="volver">
+        <a href="index.html#top"><<< Volver</a>
+      </div>
+      <span class="registro-datos__title">Resumen</span>
+      <div class="resumen-producto">
+        <picture>
+          <source media="(min-width: 992px)" srcset="src/img/products/poleron2_old_collection-min-x4.jpg">
+          <source media="(min-width: 768px)" srcset="src/img/products/poleron2_old_collection-min-x3.jpg">
+          <source media="(min-width: 576px)" srcset="src/img/products/poleron2_old_collection-min-x2.jpg">
+          <img src="src/img/products/poleron2_old_collection-min-x1.jpg" alt="Hombre vistiendo polerón negro sin cierre con código QR" class="product__img">
+        </picture>
+        <!-- <img src="src/poleron2_old_collection.jpg" alt="Hombre vistiendo polerón negro sin cierre con código QR" class="resumen-producto__img"> -->
+        <div class="resumen-detalles__section">
+          <span class="resumen__text resumen__text--title resumen__text--negro">Unisex Heavy Blend</span>
+          <span class="resumen__text resumen__text--negro">Cantidad: 1</span>
+          <span class="resumen__text resumen__text--negro">Precio: $18.99</span>
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+      
+      <div class="formulario-orden">
+        <span class="registro-datos__title">Envío</span>
+        <form action="#" method="post" class="formulario order__formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre">
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" name="correo" id="correo">
+
+          <label for="direccion">Dirección</label>
+          <input type="text" name="direccion" id="direccion">
+
+          <label for="pais">País</label>
+          <input type="text" name="pais" id="pais">
+
+          <label for="ciudad">Ciudad</label>
+          <input type="text" name="ciudad" id="ciudad">
+        </form>
+      </div>
+
+      
+      <div class="formulario-orden">
+        <span class="registro-datos__title">Pago</span>
+        <form action="#" method="post" class="formulario order__formulario">
+          <label for="t-credito">Tarjeta de crédito</label>
+          <input type="text" name="t-credito" id="t-credito">
+
+          <label for="fecha-vencimiento">Fecha de vencimiento</label>
+          <input type="text" name="fecha-vencimiento" id="fecha-vencimiento">
+
+          <label for="security-code">CVV</label>
+          <input type="text" name="security-code" id="security-code">
+
+          <input type="submit" value="Pagar" class="btn btn--primary-black order__button">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="footer-brand__logo">Min-<span class="footer-brand__logo--amarillo">QR</span></span>
+      <p class="footer-brand__uvp">Minimal merchandising, disfruta la vida con QR</p>
+      <div class="footer-brand-rrss">
+        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="footer-menu">
+        <a href="contacto.html" class="footer-menu__link">Soporte</a>
+        <a href="index.html#top" class="footer-menu__link">Productos</a>
+        <a href="acceso.html" class="footer-menu__link">Iniciar sesión</a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <span class="footer-newsletter__title"><span class="footer-newsletter__title--yellow">Únete</span>
+      a nuestro boletín
+      </span>
+
+      <form action="#" method="post" class="footer-newsletter-form">
+        <input type="email" name="newsletter" id="footer-newsletter" class="footer-newsletter-form__input" placeholder="Correo electrónico">
+        <input type="submit" value="Unirme" class="footer-newsletter-form__submit btn btn--primary">
+      </form>
+    </div>
+  </footer>
+</body>
+</html>

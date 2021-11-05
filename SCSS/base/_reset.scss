@@ -1,0 +1,20 @@
+@import 'media-queries';
+
+@font-face {
+  font-family: Neoneon;
+  src: url("../src/fonts/Neoneon.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+
+  @include responsive(sm) { font-size: 15px; }
+  @include responsive(md) { font-size: 16px; }
+}
+

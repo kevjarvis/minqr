@@ -1,0 +1,150 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.navbar {
+  background-color: $c-black-84;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  &__logo {
+    color: $c-white;
+    display: block;
+    float: left;
+    font-family: $font-logo;
+    font-size: 30px;
+    padding: 7px 0 5px 0;
+    text-decoration: none;
+    margin-left: 16px;
+
+    &--yellow {
+      color: $c-primary;
+    }
+
+    @include responsive(md) {
+      position: absolute;
+      top: 15%;
+      margin-top: auto;
+      margin-left: $m-lg;
+    }
+  }
+
+  &__menu {
+    padding: 0;
+    margin: 0 28px 0 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: $c-black-84;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+
+    @include responsive(md) {
+      clear: none;
+      float: right;
+      max-height: none;
+      margin-right: 44px;
+    }
+  }
+
+  &__link {
+    @include poppins-400(1em);
+    display: block;
+    padding: 1.2em 16px;
+    text-decoration: none;
+    color: $c-white;
+
+    &--active {
+      color: $c-primary;
+      transition: all 0.4s ease 0.3s;
+    }
+
+    &:hover {
+      color: $c-gray;
+      transition: all 0.4s ease 0.3s;
+    }
+
+    @include responsive(md) {
+      padding: 20px 20px;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 21.5px 16px 21.5px 20px;
+    position: relative;
+    user-select: none;
+
+    @include responsive(md) {
+      display: none;
+    }
+
+    .navicon {
+      background: $c-white;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+
+      &::before {
+        background: $c-white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        top: 5px;
+      }
+
+      &::after {
+        background: $c-white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        top: -5px;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+
+    &:checked ~ .navbar__menu {
+      max-height: 240px;
+    }
+
+    &:checked ~ .navbar__icon .navicon {
+      background: transparent;
+    }
+
+    &:checked ~ .navbar__icon .navicon::before {
+      transform: rotate(-45deg);
+    }
+
+    &:checked ~ .navbar__icon .navicon::after {
+      transform: rotate(45deg);
+    }
+
+    &:checked ~ .navbar__icon:not(.steps) .navicon::before {
+      top: 0;
+    }
+
+    &:checked ~ .navbar__icon:not(.steps) .navicon::after {
+      top: 0;
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .navbar__item {
+    float: left;
+  }
+}

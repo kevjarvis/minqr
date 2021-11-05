@@ -1,0 +1,90 @@
+@import '../base/media-queries';
+@import '../base/mixins';
+@import '../base/variables';
+
+.products-section {
+  @include flex-row-nowrap;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 $m-sm;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    & {
+      padding: 0 $m-lg;
+    }
+  }
+}
+
+.new-collection {
+  @include flex-col-nowrap;
+}
+
+.product {
+  @include flex-col-wrap;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  flex-shrink: 1;
+  padding: 1rem;
+  gap: 0.2rem;
+  width: 50%;
+
+  &__review {
+    @include flex-row-nowrap;
+    gap: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  &__description {
+    display: none;
+
+    @include responsive(sm) {
+      @include poppins-400(0.85rem);
+      color: #656565;
+      display: initial;
+    }
+
+    @include responsive(md) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__img {
+    width: 120px;
+    border-radius: 5px;
+    @include responsive(sm) { width: 125px; }
+    @include responsive(md) { width: 135px; }
+    @include responsive(lg) { width: 180px; }
+  }
+
+  &__name {
+    @include poppins-700(1rem);
+  }
+
+  &__collection {
+    @include poppins-400(0.714rem);
+    color: #656565;
+  }
+
+  &__price {
+    @include poppins-700(1.142rem);
+  }
+
+  &__button {
+    width: 100%;
+    align-self: flex-end;
+  }
+}
+
+.buy-section {
+  @include flex-col-nowrap;
+
+  @media (min-width: 576px) {
+    & {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

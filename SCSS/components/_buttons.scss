@@ -1,0 +1,52 @@
+@import "../base/variables";
+@import '../base/mixins';
+@import '../base/media-queries';
+
+.btn-link {
+  padding: 13px 16px;
+  text-decoration: none;
+  @include raleway-700(1rem);
+
+  &--primary-yellow {
+    background-color: $c-primary;
+    border-radius: 3px;
+    color: $c-black;
+
+    &:hover {
+      background-color: lighten($c-primary, 40%);
+      border-color: lighten($c-primary, 40%);
+      transition: all 0.4s ease 0s;
+    }
+  }
+}
+
+.btn {
+  @include raleway-700(1rem);
+  padding: 8px 16px;
+  border-radius: 3px;
+  
+  &--primary {
+    background-color: $c-primary;
+    color: $c-black;
+    border: solid 1px $c-primary;
+
+    &:hover {
+      background-color: lighten($c-primary, 40%);
+      cursor: pointer;
+      transition: all 0.4s ease 0s;
+    }
+  }
+
+  &--primary-black {
+    background-color: $c-black;
+    color: $c-white;
+    border: solid 1px $c-black;
+
+    &:hover {
+      background-color: lighten($c-black, 20%);
+      border-color: lighten($c-black, 20%);
+      transition: all 0.4s ease 0s;
+      cursor: pointer;
+    }
+  }
+}

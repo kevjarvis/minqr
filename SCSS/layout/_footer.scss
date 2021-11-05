@@ -1,0 +1,91 @@
+@import '../base/variables';
+@import '../base/mixins';
+@import '../base/media-queries';
+
+.footer {
+  @include flex-col-nowrap;
+  background-color: $c-black-84;
+  padding: 2rem $m-sm;
+  gap:1rem;
+
+  @include responsive(md) {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 2rem $m-lg;
+  }
+
+  &-brand {
+    @include flex-col-nowrap;
+    gap: 0.2rem;
+
+    &__logo {
+      font-family: $font-logo;
+      color: $c-white;
+      font-weight: normal;
+      font-size: 1.875rem;
+
+      &--amarillo {
+        color: $c-primary;
+      }
+    }
+
+    &-rrss {
+      @include flex-row-nowrap;
+      gap: 0.5rem;
+
+      a {
+        color: $c-white;
+        padding: 1rem;
+      }
+    }
+
+    &__uvp {
+      @include raleway-400(1rem);
+      color: $c-white;
+    }
+  }
+
+  &-menu {
+    @include flex-col-nowrap;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    &__link {
+      @include poppins-700(1rem);
+      text-decoration: none;
+      color: $c-white;
+    }
+  }
+
+  &-newsletter {
+    @include flex-col-nowrap;
+    gap: 1rem;
+
+    &__title {
+      @include poppins-700(1.429rem);
+      align-self: center;
+      color: $c-white;
+
+      &--yellow {
+        color: $c-primary;
+      }
+    }
+
+    &-form {
+      @include flex-col-nowrap;
+      gap: 1rem;
+
+      &__input {
+        @include poppins-400(1rem);
+        height: 3.5rem;
+        border-radius: 3px;
+        border: solid 1px $c-white;
+        padding: 0 19px;
+      }
+
+      &__submit {
+        height: 3.5rem;
+      }
+    }
+  }
+}

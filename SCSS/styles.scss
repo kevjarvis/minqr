@@ -1,0 +1,17 @@
+@import 'base/reset';
+@import 'components/buttons';
+@import 'components/section-header';
+@import 'components/product';
+@import 'components/header-nueva-coleccion';
+@import "layout/navbar";
+@import "layout/hero";
+@import 'layout/footer';
+@import 'base/media-queries';
+@import 'pages/contacto';
+@import 'pages/signin';
+@import 'pages/order';
+
+main {
+  padding-top: 45px;
+  @include responsive(md) { padding-top: 56px; }
+}
