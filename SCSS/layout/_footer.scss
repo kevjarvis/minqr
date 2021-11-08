@@ -17,6 +17,11 @@
   &-brand {
     @include flex-col-nowrap;
     gap: 0.2rem;
+    align-items: flex-start;
+
+    a {
+      text-decoration: none;
+    }
 
     &__logo {
       font-family: $font-logo;
@@ -36,7 +41,16 @@
       a {
         color: $c-white;
         padding: 1rem;
+        &:hover {
+          transition: all 0.5s ease-out 0.1s;
+        }
       }
+
+      &__facebook:hover { color: #1877f2; }
+      &__instagram:hover {color: #f35ed8; }
+      &__twitter:hover { color: #119afb; }
+
+      
     }
 
     &__uvp {
@@ -54,6 +68,11 @@
       @include poppins-700(1rem);
       text-decoration: none;
       color: $c-white;
+
+      &:hover {
+        color: $c-primary;
+        transition: all 0.3s ease-out 0.1s;
+      }
     }
   }
 

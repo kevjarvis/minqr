@@ -390,7 +390,10 @@ html {
   .footer-brand {
     display: flex;
     flex-flow: column nowrap;
-    gap: 0.2rem; }
+    gap: 0.2rem;
+    align-items: flex-start; }
+    .footer-brand a {
+      text-decoration: none; }
     .footer-brand__logo {
       font-family: "Neoneon", sans-serif;
       color: #fff;
@@ -405,6 +408,14 @@ html {
       .footer-brand-rrss a {
         color: #fff;
         padding: 1rem; }
+        .footer-brand-rrss a:hover {
+          transition: all 0.5s ease-out 0.1s; }
+      .footer-brand-rrss__facebook:hover {
+        color: #1877f2; }
+      .footer-brand-rrss__instagram:hover {
+        color: #f35ed8; }
+      .footer-brand-rrss__twitter:hover {
+        color: #119afb; }
     .footer-brand__uvp {
       font-family: 'Raleway', sans-serif;
       font-weight: 400;
@@ -421,6 +432,9 @@ html {
       font-size: 1rem;
       text-decoration: none;
       color: #fff; }
+      .footer-menu__link:hover {
+        color: #EBFF00;
+        transition: all 0.3s ease-out 0.1s; }
   .footer-newsletter {
     display: flex;
     flex-flow: column nowrap;
