@@ -623,7 +623,8 @@ main {
   display: flex;
   flex-flow: column nowrap;
   flex-grow: 1;
-  gap: 2rem; }
+  gap: 2rem;
+  margin: 0 1rem; }
 
 .sign__title {
   font-family: 'Neoneon', sans-serif;
@@ -642,15 +643,6 @@ main {
     align-self: flex-start; } }
 
 @media (min-width: 768px) {
-  .sign__form {
-    margin-left: 1rem; }
-  .sign {
-    padding-right: 16px;
-    padding-left: 0;
-    gap: var(--p-sm); }
-  .sign--left {
-    padding: 0 0 0 16px;
-    gap: 16px; }
   .sign__title {
     margin-top: 1em; }
   .sign__img {
@@ -658,28 +650,24 @@ main {
     background-image: url("../src/img/imagen-lateral-acceso.jpg");
     width: 45%;
     background-size: cover; }
+  .sign {
+    padding-left: 0;
+    padding-right: 0;
+    gap: var(--p-sm); }
+  .sign__form {
+    margin: 0 3rem; }
   .sign__img--signup {
     background-image: url("../src/img/imagen-lateral-registro.jpg"); }
   .sign__form .btn {
     margin-bottom: 2em; } }
 
 @media (min-width: 992px) {
-  .sign {
-    margin-right: 64px;
-    gap: 64px; }
-  .sign--left {
-    padding: 0 0 0 64px;
-    gap: 64px; }
-  .sign__form .formulario {
-    max-width: 90%; }
+  .sign__formulario {
+    max-width: 45vw; }
   .sign__img {
     width: 50%; }
   .sign__title {
-    text-align: initial; } }
-
-@media (min-width: 1200px) {
-  .sign {
-    gap: 64px; } }
+    text-align: center; } }
 
 @media (min-width: 992px) {
   .checkout {
