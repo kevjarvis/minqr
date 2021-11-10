@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -73,7 +74,7 @@
       </div>
 
       <div class="products-section">
-        <article class="product">
+        <article class="product" data-aos="fade-up">
           <div class="product__review">
             <picture>
               <source media="(min-width: 992px)" srcset="src/img/products/poleron2_old_collection-min-x4.jpg">
@@ -95,7 +96,7 @@
           </div>
         </article>
 
-        <article class="product">
+        <article class="product" data-aos="fade-up">
           <div class="product__review">
             <picture>
               <source media="(min-width: 992px)" srcset="src/img/products/poleron_old_collection-min-x4.jpg">
@@ -126,7 +127,7 @@
         <h3 class="section__title">Bienvenida colección Damaris</h3>
       </div>
 
-      <div class="collection-banner">
+      <div class="collection-banner" data-aos="fade-right">
         <img src="src/img/nueva_coleccion-min-x1.png" alt="Foto de producción para la nueva colección de MinQR" class="collection-banner__img">
         <div class="collection-banner__review">
           <span class="collection-banner__title">Interviene el estilo</span>
@@ -135,7 +136,7 @@
       </div>
 
       <div class="products-section">
-        <article class="product">
+        <article class="product" data-aos="fade-up">
           <div class="product__review">
             <picture>
               <source media="(min-width: 992px)" srcset="src/img/products/polera_nueva-coleccion-min-x4.jpg">
@@ -155,7 +156,7 @@
           </div>
         </article>
 
-        <article class="product">
+        <article class="product" data-aos="fade-up">
           <div class="product__review">
             <picture>
               <source media="(min-width: 992px)" srcset="src/img/products/buzo_nueva-coleccion-min-x4.jpg">
@@ -205,5 +206,9 @@
       </form>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
