@@ -7,11 +7,13 @@
   background-color: $c-black-84;
   padding: 2rem $m-sm;
   gap:1rem;
+  margin-top: 2rem;
 
   @include responsive(md) {
     flex-flow: row nowrap;
     justify-content: space-around;
     padding: 2rem $m-lg;
+    margin-top: 0;
   }
 
   &-brand {

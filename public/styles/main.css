@@ -443,12 +443,14 @@ button i {
   flex-flow: column nowrap;
   background-color: #272727;
   padding: 2rem 16px;
-  gap: 1rem; }
+  gap: 1rem;
+  margin-top: 2rem; }
   @media (min-width: 768px) {
     .footer {
       flex-flow: row nowrap;
       justify-content: space-around;
-      padding: 2rem 64px; } }
+      padding: 2rem 64px;
+      margin-top: 0; } }
   .footer-brand {
     display: flex;
     flex-flow: column nowrap;
