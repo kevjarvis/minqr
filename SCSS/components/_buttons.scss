@@ -2,6 +2,11 @@
 @import '../base/mixins';
 @import '../base/media-queries';
 
+// Esto es para el ícono de los botones
+button {
+  i { padding-right: 1rem; }
+}
+
 .cta {
   position: relative;
   display: inline-block;
@@ -80,24 +85,6 @@
   }
 }
 
-.btn-link {
-  padding: 13px 16px;
-  text-decoration: none;
-  @include raleway-700(1rem);
-
-  &--primary-yellow {
-    background-color: $c-primary;
-    border-radius: 3px;
-    color: $c-black;
-
-    &:hover {
-      background-color: lighten($c-primary, 40%);
-      border-color: lighten($c-primary, 40%);
-      transition: all 0.4s ease 0s;
-    }
-  }
-}
-
 .btn {
   @include raleway-700(1rem);
   padding: 8px 16px;
@@ -110,6 +97,7 @@
 
     &:hover {
       background-color: lighten($c-primary, 40%);
+      border: solid 1px lighten($c-primary, 40%);
       cursor: pointer;
       transition: all 0.4s ease 0s;
     }
@@ -121,10 +109,13 @@
     border: solid 1px $c-black;
 
     &:hover {
-      background-color: lighten($c-black, 20%);
-      border-color: lighten($c-black, 20%);
+      background-color: $c-primary;
+      border-color: $c-primary;
       transition: all 0.4s ease 0s;
       cursor: pointer;
-    }
+      color: $c-black;
+      box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.3);
+      -webkit-box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.3);
+      -moz-box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.3);   }
   }
 }
